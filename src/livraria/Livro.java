@@ -23,8 +23,13 @@ public class Livro {
 		System.out.println(separador);
 	}
 	
-	public void aplicaDescontoDe(double valor){
+	public boolean aplicaDescontoDe(double valor){
+		if(valor > 0.3){
+			return false;
+		}
+		
 		this.valor -= this.valor * valor;
+		return true;
 	}
 	
 	boolean temAutor(){
