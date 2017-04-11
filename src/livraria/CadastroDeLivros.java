@@ -29,5 +29,12 @@ public class CadastroDeLivros {
 		outroLivro.isbn = "789.456.123.789";
 		outroLivro.autor = outroAutor;
 		outroLivro.mostrarDetalhes();
+		
+		Livro mLivro = new Livro();
+		mLivro.nome = "Livro 03";
+		mLivro.valor = 60.90;
+		mLivro.descricao = "Livro simples";
+		mLivro.isbn = "123456789123";
+		mLivro.mostrarDetalhes();
 	}
 }
