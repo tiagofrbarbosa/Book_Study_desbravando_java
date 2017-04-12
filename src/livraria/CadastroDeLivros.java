@@ -4,37 +4,37 @@ public class CadastroDeLivros {
 	public static void main(String[] args){
 		
 		Autor autor = new Autor();
-		autor.nome = "Tiago Barbosa";
-		autor.email = "tiagofr.arbosa@hotmail.com.br";
-		autor.cpf = "38796568860";
+		autor.setNome("Tiago Barbosa");
+		autor.setEmail("tiagofr.arbosa@hotmail.com.br");
+		autor.setCpf("3336669990");
 		
-		Livro livro = new Livro();
-		livro.nome = "Java 8";
-		livro.valor = 59.90;
-		livro.descricao = "Praticando java";
-		livro.isbn = "123.456.789.900";
-		livro.autor = autor;
+		Livro livro = new Livro(autor);
+		livro.setNome("Java 8");
+		livro.setValor(59.90);
+		livro.setDescricao("Praticando java");
+		livro.setIsbn("123.456.789.900");
+		livro.setAutor(autor);
 		livro.mostrarDetalhes();
 		
 		
 		Autor outroAutor = new Autor();
-		outroAutor.nome = "Rodrigo Turini";
-		outroAutor.email = "rodrigo@caelum.com";
-		outroAutor.cpf = "33355566680";
+		outroAutor.setNome("Rodrigo Turini");
+		outroAutor.setEmail("rodrigo@caelum.com");
+		outroAutor.setCpf("33355566680");
 			
-		Livro outroLivro = new Livro();
-		outroLivro.nome = "Conforto para mente";
-		outroLivro.valor = 59.90;
-		outroLivro.descricao = "Como conquistar a paz interior";
-		outroLivro.isbn = "789.456.123.789";
-		outroLivro.autor = outroAutor;
+		Livro outroLivro = new Livro(outroAutor);
+		outroLivro.setNome("Conforto para mente");
+		outroLivro.setValor(59.90);
+		outroLivro.setDescricao("Como conquistar a paz interior");
+		outroLivro.setIsbn("789.456.123.789");
+		outroLivro.setAutor(outroAutor);
 		outroLivro.mostrarDetalhes();
 		
-		Livro mLivro = new Livro();
-		mLivro.nome = "Livro 03";
-		mLivro.valor = 60.90;
-		mLivro.descricao = "Livro simples";
-		mLivro.isbn = "123456789123";
+		Livro mLivro = new Livro(outroAutor);
+		mLivro.setNome("Livro 03");
+		mLivro.setValor(60.90);
+		mLivro.setDescricao("Livro simples");
+		mLivro.setIsbn("123456789123");
 		mLivro.mostrarDetalhes();
 	}
 }
